@@ -20,5 +20,5 @@ var a=new Array();
 console.log(Array instanceof Object);
 console.log(a instanceof Object);
 
-console.log(a instanceof Function);
+console.log(a instanceof Function); //false
 console.log(a instanceof Array);
