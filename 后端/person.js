@@ -1,4 +1,4 @@
-//wode 
+ 
 // function person(){
 // 	exports.eat=function(){
 // 		console.log('eat');
@@ -8,12 +8,11 @@
 // 	};
 // }
 //moudle.exports=person;
-// ///////////////////////////////
 // var eat;
 // exports.eat=function(){
 	
 // }
-///////laoshi
+
 moudle.exports=function(){
 	this.eat=function(){
 		console.log('eat');
