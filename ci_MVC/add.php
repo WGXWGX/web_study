@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	include "conn.php";
 	if(isset($_POST['sub'])){
 		$title = $_POST['title'];
@@ -24,10 +24,6 @@
 
 
 ?>
-
-
-
-
 <meta charset="UTF-8">
 <form action="add.php" method="post">
 	标题:<input type="text" name="title"><br/>
