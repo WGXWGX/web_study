@@ -49,7 +49,7 @@
 			}else{
 				$month=$month+1;
 			}
-			return "year=$year&month=$month";
+			 return "year=$year&month=$month";
 		}	
 		public function weekList(){
 			$arr=array ('日','一','二','三','四','五','六');
@@ -91,8 +91,3 @@
 	
 	}
 ?>
-
-
-
-
-
