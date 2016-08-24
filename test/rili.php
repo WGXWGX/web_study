@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	class rili{
 		public $year;
 		public $month;
@@ -79,17 +79,7 @@
 			}
 			echo "</tr>";
 		}
-		public function yearList(){
-			echo "<tr>";
-			echo "<td><a href=?".$this->prevyear($this->year,$this->month).">".'<<'."</a></td>";
-			echo "<td><a href=?".$this->prevmonth($this->year,$this->month).">".'<'."</a></td>";
-			echo "<td colspan='3'>".$this->year."年".$this->month."月"."</td>";
-			echo "<td><a href=?".$this->nextmonth($this->year,$this->month).">".'>'."</a></td>";
-			echo "<td><a href=?".$this->nextyear($this->year,$this->month).">".'>>'."</a></td>";
-			echo "</tr>";
-		}
-	
-	}
+		
 ?>
 
 
