@@ -1,0 +1,20 @@
+$(function(){
+	var $checkAddress = $('#checkaddress');
+	var $addressName = $('#addresstable td');
+	$checkAddress.hover(function(){
+		$(this).css({
+			background: '#fff'
+		});
+		$('#topsprite1').hide();
+		$('#topsprite2').show();
+		$('#blank').show();
+		$('#moreaddress').show();
+	},function(){
+		$(this).css({
+			background: '#f5f5f5'
+		});
+		$('#topsprite1').show();
+		$('#topsprite2').hide();
+		$('#blank').hide();
+		$('#moreaddress').hide();
+	});
