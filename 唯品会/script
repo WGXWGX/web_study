@@ -45,4 +45,21 @@ $(function(){
 		$(this).addClass('selected2').siblings().removeClass('selected2');
 		$('#navlast').removeClass('selected2');
 	});
+	$('#navlast').on('click',function(){
+		$(this).addClass('selected2');
+		$('#mainnav li').removeClass('selected2');
+	});
+	$('#imghint li').hover(function(){
+		$(this).addClass('selected-imghint').siblings().removeClass('selected-imghint');
+		$('#imgtwo').animate({
+			opacity: 1
+		},500);
+		$('#imgone').animate({
+			opacity: 0
+		},500);
+	},function(){});
+
+});
+
+
 	
