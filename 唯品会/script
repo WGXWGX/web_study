@@ -31,3 +31,13 @@ $(function(){
 			background: '#fff',
 			color: '#f10582'
 		});
+	},function(){
+		$('#topli2 #phone').hide();
+		$('#topli2 #phone1').show();
+		$('#blankphone').hide();
+		$('#wrapcode').hide();
+		$(this).css({
+			background: '#f5f5f5',
+			color: '#777'
+		});
+	
