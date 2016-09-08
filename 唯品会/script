@@ -40,4 +40,9 @@ $(function(){
 			background: '#f5f5f5',
 			color: '#777'
 		});
+	});
+	$('#mainnav li').on('click',function(){
+		$(this).addClass('selected2').siblings().removeClass('selected2');
+		$('#navlast').removeClass('selected2');
+	});
 	
