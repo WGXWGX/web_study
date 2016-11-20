@@ -1,0 +1,1 @@
+var db = require('./db.js');exports.getByNamePass = function(username,pass,callback){    var sql = 'select * from t_user where username=? and pass=?';    db.query(sql,[username,pass],callback);}exports.save = function(username,pass,sex,callback){    var sql = 'insert into t_user(username,pass,sex) values(?,?,?)';    db.query(sql,[username,pass,sex],callback);};

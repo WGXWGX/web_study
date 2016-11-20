@@ -1,0 +1,48 @@
+/*header开始*/
+#header{
+  width: 100%;
+  height: 100px;
+  background: #FAEBD7;
+  position: relative;
+}
+#header .logo{
+  float: left;
+  width: 200px;
+  height: 70px;
+  margin-top: 15px;
+}
+#header .login-info{
+  margin-top: 40px;
+  float: right;
+}
+.wrapper{
+  margin: 0 auto;
+  width: 1170px;
+}
+/*header结束*/
+/*container开始*/
+#container{
+  margin-top: 50px;
+}
+#blog-list{
+  width: 75%;
+  height: 500px;
+  float: left;
+  background: #a7dbd8;
+}
+#user-list{
+  width: 20%;
+  height: 500px;
+  float: right;
+  background: #a7dbd8;
+}
+#blog-left{
+  float: left;
+}
+#blog-right{
+  float: right;
+}
+.blog{
+  margin-bottom:20px;
+}
+/*container结束*/
