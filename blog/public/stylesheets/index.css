@@ -1,8 +1,8 @@
-/*header¿ªÊ¼*/
+/*headerå¼€å§‹*/
 #header{
   width: 100%;
   height: 100px;
-  background: #FAEBD7;
+  background: #F5F5DC;
   position: relative;
 }
 #header .logo{
@@ -19,30 +19,41 @@
   margin: 0 auto;
   width: 1170px;
 }
-/*header½áÊø*/
-/*container¿ªÊ¼*/
+/*headerç»“æŸ*/
+/*containerå¼€å§‹*/
 #container{
   margin-top: 50px;
 }
 #blog-list{
   width: 75%;
-  height: 500px;
+  height: 400px;
   float: left;
-  background: #a7dbd8;
+  background: #F5F5DC;
 }
 #user-list{
   width: 20%;
-  height: 500px;
+  height: 400px;
   float: right;
-  background: #a7dbd8;
+  background: #F5F5DC;
 }
 #blog-left{
-  float: left;
+  display: inline-block;
 }
 #blog-right{
   float: right;
 }
 .blog{
-  margin-bottom:20px;
+  margin-bottom:40px;
 }
-/*container½áÊø*/
+/*containerç»“æŸ*/
+/*footerå¼€å§‹*/
+#footer{
+    width: 100%;
+    height: 100px;
+    background: #F5F5DC;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    line-height: 100px;
+}
+/*footerç»“æŸ*/
