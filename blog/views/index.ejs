@@ -1,67 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>首页</title>
-    <link rel="stylesheet" href="/stylesheets/common.css"/>
-    <link rel='stylesheet' href='/stylesheets/index.css' />
-  </head>
-  <body>
-    <header id="header">
-      <div class="wrapper">
-        <img src="/images/1.jpg" class="logo">
-        <div class="login-info">
-          <a href="/login">登录</a> | <a href="/regist">注册</a>
+    <head>
+        <title>首页</title>
+        <link rel="stylesheet" href="/stylesheets/common.css"/>
+        <link rel='stylesheet' href='/stylesheets/index.css' />
+    </head>
+    <body>
+        <header id="header">
+            <div class="wrapper">
+                <img src="/images/1.jpg" class="logo">
+                <div class="login-info">
+                    <% 
+                        if(user){ 
+                    %>
+                        欢迎, <%= user.username %> | <a href="/logout">退出</a>
+                    <% 
+                        }else{
+                    %>
+                        <a href="/login">登录</a> | <a href="/regist">注册</a>
+                    <%
+                        }
+                    %>
+                </div>
+            </div>
+        </header>
+        <div id="container" class="wrapper">
+            <div id="blog-list">
+                <ul>
+                    <% 
+                        for(var i=0; i<blogs.length; i++){
+                        var blog = blogs[i];
+                    %>
+                    <li class="blog">
+                        <div id="blog-left">
+                            <h2 class="blog-title">
+                                <a href="/view?blogId=<%=blog.blog_id%>"><%= blog.title%></a>
+                            </h2>
+                            <p class="blog-content"><%= blog.content%></p>
+                        </div>
+                        <div id="blog-right">
+                            <p class="blog-author"><%= blog.username%></p>
+                            <p class="blog-add-time"><%= blog.add_time%></p>
+                     
+                            <p class="del">
+                                <a href="#">删除</a>
+                            </p>
+                      
+                        </div>
+                    </li>
+                    <%
+                        }
+                    %>
+                </ul>
+            </div>
+          <div id="user-list">user</div>
         </div>
-      </div>
-    </header>
-    <div id="container" class="wrapper">
-        <div id="blog-list">
-          <ul>
-            <li class="blog">
-              <div id="blog-left">
-                <h2 class="blog-title">blog</h2>
-                <p class="blog-content">hjhjhjhjhjh</p>
-              </div>
-              <div id="blog-right">
-                <p class="blog-author">lisi</p>
-                <p class="blog-add-time">2015-2-12</p>
-                <p class="del">
-                  <a href="#">删除</a>
-                </p>
-              </div>
-            </li>
-            <li class="blog">
-              <div id="blog-left">
-                <h2 class="blog-title">blog</h2>
-                <p class="blog-content">hjhjhjhjhjh</p>
-              </div>
-              <div id="blog-right">
-                <p class="blog-author">lisi</p>
-                <p class="blog-add-time">2015-2-12</p>
-                <p class="del">
-                  <a href="#">删除</a>
-                </p>
-              </div>
-            </li>
-            <li class="blog">
-              <div id="blog-left">
-                <h2 class="blog-title">blog</h2>
-                <p class="blog-content">hjhjhjhjhjh</p>
-              </div>
-              <div id="blog-right">
-                <p class="blog-author">lisi</p>
-                <p class="blog-add-time">2015-2-12</p>
-                <p class="del">
-                  <a href="#">删除</a>
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      <div id="user-list"></div>
-    </div>
-    <footer id="footer">特别感谢@1643930385@qq.com的大力支持
-    联系电话:18845637750</footer>
-  </body>
+        <footer id="footer">特别感谢@1643930385@qq.com的大力支持  鸣谢腾讯qq ：百度google：的赞助
+        15145076862@163.com 联系电话:18845637750</footer>
+    </body>
 </html>
-
