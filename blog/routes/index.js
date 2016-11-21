@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var welcome = require('../controllers/welcome.js');
-router.get('/',welcome.index); //title  ÊÇ´«¸ø·şÎñÆ÷¶ËtitleµÄ
+router.get('/',welcome.index); //title  æ˜¯ä¼ ç»™æœåŠ¡å™¨ç«¯titleçš„
 router.get('/login',welcome.login);
 router.get('/regist',welcome.regist);
+router.get('/view',welcome.view);
 router.post('/checkregist',welcome.checkregist);
 router.post('/checklogin',welcome.checklogin);
 module.exports = router;
-//ÕÒ¿ØÖÆÆ÷
+//æ‰¾æ§åˆ¶å™¨
