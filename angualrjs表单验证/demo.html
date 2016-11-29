@@ -93,6 +93,54 @@
           <!-- <p>{{username}}</p> -->
         </div>
 
+   <div class="form-group">
+          <label for="tel">公司联系电话</label>
+          <div class="wrap">
+            <input
+              type="number"
+              class="form-control"
+              id="tel"
+              placeholder="请输入联系人手机号"
+              ng-model="tel"
+              name="tel"
+              ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/"
+              ng-class="{
+                'error': signUpForm.tel.$invalid && signUpForm.tel.$touched,
+                'success':signUpForm.tel.$valid }"
+              required
+            >
+            <i class="fa fa-check tip right" ng-if="signUpForm.tel.$valid && signUpForm.tel.$touched"></i>
+            <i class="fa fa-remove tip wrong" ng-if="signUpForm.tel.$invalid && signUpForm.tel.$touched"></i>
+
+
+            <!-- 验证必填 $error.required -->
+            <P
+              class="error-info"
+              ng-if="signUpForm.tel.$touched && signUpForm.tel.$error.required"
+            >手机号不能为空</P>
+
+
+            <!-- 验证必填 $error.required -->
+            <P
+              class="error-info"
+              ng-if="signUpForm.tel.$touched && signUpForm.tel.$error.pattern"
+            >手机号格式不正确</P>
+
+          </div>
+
+        </div>
+        <div class="form-group">
+          <label for="email">邮箱</label>
+          <input type="password" class="form-control" id="email" placeholder="请输入联系人邮箱">
+        </div>
+        <div class="form-group">
+          <label for="company">公司名称</label>
+          <input type="password" class="form-control" id="company" placeholder="请输入正确的公司名称">
+        </div>
+        <div class="form-group">
+          <label for="website">公司网址</label>
+          <input type="password" class="form-control" id="website" placeholder="请输入您的公司网址，以http://开头">
+        </div>
 
 
      
