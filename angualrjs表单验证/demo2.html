@@ -54,6 +54,23 @@
     
 <body>
 
+  <div class="container">
+    <div class="row" ng-controller="FormController">
+
+    <form class="col-md-10" name="signUpForm" ng-submit="submitForm()">
+    <pre>
+      {{signUpForm.x}}
+    </pre>
+    <input required type="text" name="x" ng-model="name" ng-minlength="6" ng-maxlength="10" ng-class="{'error': signUpForm.x.$invalid && signUpForm.x.$touched}">
+    <p ng-if="signUpForm.x.$invalid">输入错误</p>
+    <p ng-if="signUpForm.x.$valid">{{signUpForm.x.$viewValue}}</p>
+    
+
+    
+  </form>
+  </div>
+  </div>
+
 
 
 
