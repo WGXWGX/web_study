@@ -42,6 +42,19 @@ fs.readFile(textFileQiu,encoding,function(err,data){
 			}
 		}
 	}
+	var file1 = JSON.stringify(method2);
+	fs.writeFile('Data/res.json',file1,function(){
+	});
+	var file2 = JSON.stringify(method1Obj);
+	fs.writeFile('Data/res1.json',file2,function(){
+	});
+	var file3 = JSON.stringify(method1);
+	fs.writeFile('Data/res3.json',file3,function(){
+	});
+	var file4 = JSON.stringify(method2Obj);
+	fs.writeFile('Data/res4.json',file4,function(){
+	});
+});
 
 
 
