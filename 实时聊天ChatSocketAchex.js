@@ -58,7 +58,45 @@ $.fn.extend({ChatSocket: function(opciones) {
                         
                     }
     
-    
+     function IniciarConexion(){
+                    conex='{"setID":"'+Room+'","passwd":"'+pass+'"}';
+                    ws= new WebSocket("ws://achex.ca:4010");
+                    ws.onopen= function(){ ws.send(conex); }
+                    ws.onmessage= function(Mensajes){
+                    var MensajesObtenidos=Mensajes.data;
+                    var obj = jQuery.parseJSON(MensajesObtenidos);
+                    AgregarItem(obj);
+                    
+                    if(obj.sID!=null){
+                        
+                                                      
+                    if( $('#'+obj.sID).length==0 )
+                    {
+                        
+                      $('#listaOnline').append('<li class="list-group-item" id="'+obj.sID+'"><span class="label label-success">&#9679;</span> - '+obj.Nombre+'</li>');
+                        
+                    }
+                     
+                    }
+                    
+                }
+                ws.onclose= function(){
+                    alert("Conexión cerrada");
+                }
+          }
+           IniciarConexion();
+          function iniciarChat(){
+            Nombre=$('#'+lblTxtEntrar).val();
+            $('#'+idDialogo).hide();
+              $('#'+idOnline).show();
+              
+            CrearChat();  
+            UsuarioOnline();
+            getOnline();
+          }
+           
+         
+         
     
            
          CrearEntrada();
